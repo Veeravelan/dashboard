@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.loginLinkColor{
+  color: #6c6e6f;
+}
+
+h4, .h4 {
+  font-size: 1.3rem;
+}
+.shadow {
+  &.top {
+    box-shadow: 0px -15px 10px -15px #00000061;
+  }
+  &.bottom {
+    box-shadow: 0px 15px 10px -15px #00000061;
+  }
+  &.left {
+    box-shadow: -15px 0px 10px -15px #00000061;
+  }
+  &.right {
+    box-shadow: 15px 0px 10px -15px #00000061;
+  }
+}
+
+/*******Social icons style *******/
+.btn-twitter:hover{
+  background-color: #00ACEE;
+    border-color: #00ACEE;
+}
+
+.btn-facebook:hover{
+  background-color: #4267B2;
+    border-color: #4267B2;
+}
+.btn-linkedin:hover{
+  background-color: #0E76A8;
+    border-color: #0E76A8;
+}
+
+/****** Custom checkbox ******/
+
+label.customCheckbox{
+  cursor: pointer;
+  flex-grow: 1;
+  input[type="checkbox"]{
+    display: none;
+    + .label-text:before{
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+      margin: -6px 8px 0 0;
+      vertical-align: middle;
+      width: 22px;
+      height: 22px;
+      background: #ecf0f1;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      color: #ecf0f1;
+      content: '';
+    }
+    &:checked + .label-text:before{
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.3em;
+      background-color: #2f92a5;
+      text-align: center;
+      line-height: 1em;
+      color: #ecf0f1;
+      content: '\2714';
+    }
+  }
+}
+
+/*Login module common style*/
+.loginModule{
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  .delimiter {
+    padding: 1rem;
+  }
+  
+  .social-buttons {
+    .btn {
+      margin: 0 0.5rem 1rem;
+    }
+  }
+  
+  .signup-section {
+    padding: 0.3rem 0rem;
+  }
+  [type="email"], [type="password"], [type="text"]{
+    height: 48px;
+  }
+  .card-body{
+    border-top: 7px solid #2f92a5;
+      border-top-left-radius: 0.3em;
+      border-top-right-radius: 0.3em;
+  }
+  @media (min-width: 576px){
+    .modal-dialog {
+      max-width: 400px;
+  
+      .modal-content {
+        padding: 1rem;
+      }
+    }
+  }  
+}
